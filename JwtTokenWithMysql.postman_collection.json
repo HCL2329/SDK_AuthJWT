@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "a18fb475-5939-45a7-85e3-0fdfc75113d5",
+		"name": "JwtTokenWithMysql",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "forAdmin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ2YXJzaGEiLCJleHAiOjE2NjQ0NDQ1NTYsImlhdCI6MTY2NDQyNjU1Nn0.f_JuCyzDEjmj3Xu3TeszBcIiUDlYUtAXNGymizgfE8LegXwT9-pqOwXRnt2CL4U-plZgi8PThpI4O187Nj1qjA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8877/forAdmin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8877",
+					"path": [
+						"forAdmin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTokenlogin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \"userName\":\"varsha\",\r\n    \"userPassword\":\"varsha\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8877/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8877",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createNewRole",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbjEyMyIsImV4cCI6MTY2NDQ0Mjc0MSwiaWF0IjoxNjY0NDI0NzQxfQ.8LT-2VP83cvhgWymrEj1nDaE2uFGsVEoGcR0R6xmA9LT5axmeScskU-5uRp8UHFxxucbUTJV6ecrZCfBVAkqSQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"roleName\":\"Admin\",\r\n    \"roleDescription\":\"he is admin\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8877/createNewRole",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8877",
+					"path": [
+						"createNewRole"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registerNewUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n \"userName\":\"varsha\",\r\n    \"userFirstName\":\"varsha\",\r\n  \"userLastName\":\"kumari\",\r\n   \"userPassword\":\"varsha\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8877/registerNewUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8877",
+					"path": [
+						"registerNewUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "forUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ2YXJzaGEiLCJleHAiOjE2NjQ0NDQ1NTYsImlhdCI6MTY2NDQyNjU1Nn0.f_JuCyzDEjmj3Xu3TeszBcIiUDlYUtAXNGymizgfE8LegXwT9-pqOwXRnt2CL4U-plZgi8PThpI4O187Nj1qjA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8877/forUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8877",
+					"path": [
+						"forUser"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
