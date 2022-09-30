@@ -11,7 +11,7 @@ import com.durgesh.jwt.entity.JwtResponse;
 import com.durgesh.jwt.service.JwtService;
 
 @RestController
-@CrossOrigin
+@CrossOrigin("http://localhost:4200/")
 public class JwtController {
 
     @Autowired
